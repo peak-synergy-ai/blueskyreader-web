@@ -19,7 +19,7 @@ const sourceSans = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "BlueSky Reader - Your Daily Digest",
+  title: "PapillonCast - Your Daily Digest",
   description: "Stay in the loop with AI-generated podcast-style summaries of your BlueSky feed",
   generator: "v0.app",
 }

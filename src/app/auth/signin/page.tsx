@@ -59,7 +59,7 @@ export default function SignIn() {
         <Card>
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-serif">Welcome Back</CardTitle>
-            <CardDescription>Sign in to access your BlueSky Reader</CardDescription>
+            <CardDescription>Sign in to access your PapillonCast</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             {error && (

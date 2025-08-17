@@ -1,4 +1,4 @@
-# BlueSky Reader Web
+# PapillonCast
 
 A modern web application for reading and managing BlueSky content, built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui.
 

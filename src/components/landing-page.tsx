@@ -16,7 +16,7 @@ export function LandingPage() {
             <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
               <Mic className="w-4 h-4 text-primary-foreground" />
             </div>
-            <h1 className="text-xl font-bold font-serif">BlueSky Reader</h1>
+            <h1 className="text-xl font-bold font-serif">PapillonCast</h1>
           </div>
           <Button variant="outline" size="sm" asChild>
             <Link href="/auth/signin">Login</Link>
@@ -140,7 +140,7 @@ export function LandingPage() {
       {/* Footer */}
       <footer className="border-t border-border py-8 px-4">
         <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2024 BlueSky Reader. Powered by AI.</p>
+          <p>&copy; 2025 PapillonCast. Powered by AI.</p>
         </div>
       </footer>
     </div>

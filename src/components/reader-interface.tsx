@@ -231,7 +231,7 @@ export function ReaderInterface() {
               <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
                 <Mic className="w-4 h-4 text-primary-foreground" />
               </div>
-              <h1 className="text-xl font-bold font-serif">BlueSky Reader</h1>
+              <h1 className="text-xl font-bold font-serif">PapillonCast</h1>
             </Link>
             <Badge variant="secondary">{session.user.email}</Badge>
           </div>
