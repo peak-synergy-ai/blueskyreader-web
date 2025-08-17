@@ -27,8 +27,8 @@ export async function GET() {
 
     // Sort by creation date (newest first)
     history.sort((a, b) => {
-      const dateA = new Date(a.createdAt as string).getTime()
-      const dateB = new Date(b.createdAt as string).getTime()
+      const dateA = new Date((a as any).createdAt || 0).getTime()
+      const dateB = new Date((b as any).createdAt || 0).getTime()
       return dateB - dateA
     })
 
