@@ -51,11 +51,10 @@ export const authOptions: NextAuthOptions = {
       return token
     },
   },
-  pages: {
-    signIn: "/auth/signin",
-    error: "/auth/error",
-  },
+  // Remove custom pages to use NextAuth defaults
   session: {
     strategy: "jwt",
   },
+  // Add proper OAuth configuration
+  secret: process.env.NEXTAUTH_SECRET,
 }

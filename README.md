@@ -19,9 +19,37 @@ First, run the development server:
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3600](http://localhost:3600) with your browser to see the result.
 
 You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
+
+## 🔐 Environment Variables
+
+Create a `.env.local` file in the root directory with the following variables:
+
+```bash
+# NextAuth Configuration
+NEXTAUTH_SECRET=your-secret-key-here
+NEXTAUTH_URL=http://localhost:3600
+
+# Google OAuth Credentials
+GOOGLE_CLIENT_ID=your-google-client-id-here
+GOOGLE_CLIENT_SECRET=your-google-client-secret-here
+
+# Vercel KV (if using)
+KV_URL=your-kv-url-here
+KV_REST_API_URL=your-kv-rest-api-url-here
+KV_REST_API_TOKEN=your-kv-rest-api-token-here
+KV_REST_API_READ_ONLY_TOKEN=your-kv-read-only-token-here
+```
+
+### Setting up Google OAuth:
+1. Go to [Google Cloud Console](https://console.cloud.google.com/)
+2. Create a new project or select existing one
+3. Enable Google+ API
+4. Go to Credentials → Create Credentials → OAuth 2.0 Client ID
+5. Set authorized redirect URI to: `http://localhost:3600/api/auth/callback/google`
+6. Copy the Client ID and Client Secret to your `.env.local` file
 
 ## 📝 Available Scripts
 
