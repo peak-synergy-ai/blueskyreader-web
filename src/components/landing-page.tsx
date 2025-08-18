@@ -1,28 +1,16 @@
 "use client"
-import { Button } from "@/components/ui/button"
-import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import React from "react";
+import { Card, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge"
 import { Mic, Headphones, Zap, Users, Clock, Sparkles } from "lucide-react"
 import { WaitlistForm } from "@/components/waitlist-form"
-import Link from "next/link"
+import Header from "./header";
+import Footer from "./footer";
 
-export function LandingPage() {
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border">
-        <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <Mic className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <h1 className="text-xl font-bold font-serif">PapillonCast</h1>
-          </div>
-          <Button variant="outline" size="sm" asChild>
-            <Link href="/auth/signin">Login</Link>
-          </Button>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="py-16 px-4">
@@ -138,11 +126,7 @@ export function LandingPage() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border py-8 px-4">
-        <div className="container mx-auto text-center text-muted-foreground">
-          <p>&copy; 2025 PapillonCast. Powered by AI.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
