@@ -65,7 +65,7 @@ export function ReaderInterface() {
       } else {
         setMessage({ type: "error", text: "Failed to load user settings" })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Network error" })
     } finally {
       setLoading(false)
@@ -87,7 +87,7 @@ export function ReaderInterface() {
       } else {
         setMessage({ type: "error", text: "Failed to update settings" })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Network error" })
     } finally {
       setUpdating(false)
@@ -102,7 +102,7 @@ export function ReaderInterface() {
 
       setUserSettings((prev) => (prev ? { ...prev, blueskyConnected: true } : null))
       setMessage({ type: "success", text: "BlueSky account connected successfully!" })
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Failed to connect BlueSky account" })
     } finally {
       setUpdating(false)
@@ -132,7 +132,7 @@ export function ReaderInterface() {
 
         const titles = {
           quick: "Quick Catchup",
-          "whats-going-on": "What's Going On?",
+          "whats-going-on": "What&apos;s Going On?",
           "deep-dive": "Let's Go Deep!",
         }
 
@@ -156,7 +156,7 @@ export function ReaderInterface() {
         const data = await response.json()
         setMessage({ type: "error", text: data.error || "Failed to generate content" })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Network error" })
     } finally {
       setGeneratingContent(null)
@@ -379,7 +379,7 @@ export function ReaderInterface() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <MessageCircle className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="font-serif">What's Going On?</CardTitle>
+              <CardTitle className="font-serif">What&apos;s Going On?</CardTitle>
               <CardDescription>
                 Get a podcast-style presentation of trending topics and viral content from your feed
               </CardDescription>
@@ -395,7 +395,7 @@ export function ReaderInterface() {
                 ) : (
                   <MessageCircle className="w-4 h-4 mr-2" />
                 )}
-                What's Trending?
+                What&apos;s Trending?
               </Button>
             </CardContent>
           </Card>
@@ -405,7 +405,7 @@ export function ReaderInterface() {
               <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
                 <Brain className="w-6 h-6 text-primary" />
               </div>
-              <CardTitle className="font-serif">Let's Go Deep!</CardTitle>
+              <CardTitle className="font-serif">Let&apos;s Go Deep!</CardTitle>
               <CardDescription>
                 Get an in-depth conversation between two AI personalities analyzing your feed content
               </CardDescription>

@@ -41,7 +41,7 @@ export async function PATCH(request: NextRequest) {
 
     const { feedTimeWindow, blueskyConnected } = await request.json()
 
-    const updates: Record<string, any> = {}
+    const updates: Record<string, unknown> = {}
 
     if (feedTimeWindow && ["1hour", "4hours", "8hours", "24hours"].includes(feedTimeWindow)) {
       updates.feedTimeWindow = feedTimeWindow

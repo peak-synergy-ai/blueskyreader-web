@@ -94,7 +94,7 @@ export function LandingPage() {
                 </div>
                 <CardTitle className="font-serif">Social Context</CardTitle>
                 <CardDescription>
-                  Understand what's trending and viral in your network with intelligent analysis
+                  Understand what&apos;s trending and viral in your network with intelligent analysis
                 </CardDescription>
               </CardHeader>
             </Card>

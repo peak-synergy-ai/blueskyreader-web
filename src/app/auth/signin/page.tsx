@@ -1,7 +1,7 @@
 "use client"
 
 import { signIn, getSession } from "next-auth/react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, Suspense } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,7 +9,7 @@ import { Alert, AlertDescription } from "@/components/ui/alert"
 import { AlertCircle, ArrowLeft } from "lucide-react"
 import Link from "next/link"
 
-export default function SignIn() {
+function SignInContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const [isLoading, setIsLoading] = useState(false)
@@ -98,7 +98,7 @@ export default function SignIn() {
             </Button>
 
             <div className="text-center text-sm text-muted-foreground">
-              Don't have access?{" "}
+              Don&apos;t have access?{" "}
               <Link href="/" className="text-primary hover:underline">
                 Join the waitlist
               </Link>
@@ -107,5 +107,13 @@ export default function SignIn() {
         </Card>
       </div>
     </div>
+  )
+}
+
+export default function SignIn() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SignInContent />
+    </Suspense>
   )
 }

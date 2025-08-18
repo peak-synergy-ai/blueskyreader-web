@@ -10,7 +10,7 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ user, account, profile }) {
+    async signIn({ user }) {
       if (!user.email) return false
 
       try {
@@ -40,14 +40,14 @@ export const authOptions: NextAuthOptions = {
         return false
       }
     },
-    async session({ session, token }) {
+    async session({ session }) {
       if (session.user?.email) {
         // Add admin flag for peaksynergyai.com domain
         session.user.isAdmin = session.user.email.endsWith("@peaksynergyai.com")
       }
       return session
     },
-    async jwt({ token, user }) {
+    async jwt({ token }) {
       return token
     },
   },

@@ -22,7 +22,7 @@ interface HistoryItem {
 }
 
 export function HistoryPage() {
-  const { data: session, status } = useSession()
+  const { status } = useSession()
   const [history, setHistory] = useState<HistoryItem[]>([])
   const [loading, setLoading] = useState(true)
   const [selectedContent, setSelectedContent] = useState<HistoryItem | null>(null)

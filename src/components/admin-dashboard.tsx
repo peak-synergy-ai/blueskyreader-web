@@ -47,7 +47,7 @@ export function AdminDashboard() {
       } else {
         setMessage({ type: "error", text: "Failed to fetch users" })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Network error" })
     } finally {
       setLoading(false)
@@ -70,7 +70,7 @@ export function AdminDashboard() {
         const data = await response.json()
         setMessage({ type: "error", text: data.error || "Failed to update user" })
       }
-    } catch (error) {
+    } catch {
       setMessage({ type: "error", text: "Network error" })
     } finally {
       setUpdating(null)
@@ -136,7 +136,7 @@ export function AdminDashboard() {
         <Card className="w-full max-w-md">
           <CardHeader className="text-center">
             <CardTitle className="text-destructive">Access Denied</CardTitle>
-            <CardDescription>You don't have permission to access this page.</CardDescription>
+            <CardDescription>You don&apos;t have permission to access this page.</CardDescription>
           </CardHeader>
           <CardContent>
             <Button asChild className="w-full">
