@@ -13,7 +13,7 @@ export default function LandingPage() {
       <Header />
 
       {/* Hero Section */}
-      <section className="py-16 px-4">
+      <section className="pt-24 py-16 px-4">
         <div className="container mx-auto max-w-4xl text-center">
           <Badge variant="secondary" className="mb-4">
             <Sparkles className="w-3 h-3 mr-1" />
